@@ -1,0 +1,269 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: montserrat;
+    background-color: rgba(11, 6, 38, 0.726);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+nav{
+    background: #323233;
+    height: 100px;
+    width: 100%;
+}
+logo{
+    line-height: 80px;
+    padding: 40px;
+
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 10px;
+}
+nav ul li a{
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    text-transform: uppercase;
+}
+a:hover {
+    background-color: rgba(8, 241, 241, 0.467);
+    transition: 0.3s ease-in-out ;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+nav ul li ul {
+    position: absolute;
+    display: none;
+    background-color: rgb(0, 0, 0);
+    padding: 0%;
+    z-index: 999;
+}
+nav ul li:hover > ul {
+    display: block;                           
+}
+nav ul li ul li {
+    line-height: 2;
+    width: 150px;
+    padding: 6px;
+    display: block;
+    text-align: center;
+}
+
+video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.bgtitle h1 {
+    margin-top: 13%;
+    margin-left: 25%;
+    justify-content: center;
+    color: white;
+    position: relative;
+    font-size: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 2px 2px 4px whitesmoke;
+}
+.bgtitle p {
+    margin-top: 5%;
+    margin-left: 12%;
+    color: white;
+    position: relative;
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 2px 2px 4px whitesmoke;
+}
+
+
+.section-1 {
+    margin-top: 13%;
+    margin-left: 4%;
+    font-size: 17px;
+    background-color: rgba(81, 116, 205, 0.384);
+    padding: 20px;
+    width: 90%;
+    border-radius: 30px;
+}
+.section-1 h3{
+    margin-left: 40%;
+    font-size: 30px;
+    padding: 10px;
+    text-shadow: 4px 5px 6px wheat;
+}
+.section-1 p {
+    color: whitesmoke;
+}
+
+
+.section-2 {
+    margin-top: 3%;
+    margin-left: 4%;
+    font-size: 17px;
+    background-color: rgb(169, 185, 238);
+    padding: 20px;
+    width: 90%;
+    box-shadow: 5px 10px white;
+    border-radius: 15px;
+}
+.section-2 h3{
+    margin-left: 30%;
+    font-size: 25px;
+    padding: 10px;
+}
+
+
+.section-3{
+    margin: 5%;
+}
+.wrapimg img {
+    position: relative;
+    float: right;
+    border-radius: 50%;
+    margin: 20px;
+}
+.section-3 h3 {
+    font-family:cursive;
+    margin-left: 60px;
+    color: white; 
+    font-size: 25px;
+}
+.s3-text {
+    font-size: 17px;
+    margin-left: 40px; 
+    margin-bottom: 20px; 
+    color: antiquewhite;
+}
+
+
+.section-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-4 h2 {
+    text-align: center;
+    font-family: monospace;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: whitesmoke;
+}
+.container-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card {
+    height: 100px;
+    margin: 0px 15px;
+    width: 450px;
+    position: relative;
+    box-shadow: 0 4px 20px 0 rgb(61, 58, 58);
+    margin:auto;
+    cursor: default;
+    transition: all 300ms ease;
+}
+.card img {
+    opacity: 0.7;
+}
+.card:hover {
+    box-shadow: 30px 30px 30px 30px rgb(240, 239, 255);
+    transform: translateY(-4.5%);
+}
+.card-1 {
+    margin-right: 35px;
+}
+.card-2 {
+    margin-left: 35px;
+}
+.article {
+    height: 50px;
+    width: 450px;
+    padding: 0px 13px;  
+    position: absolute;
+    color: rgb(15, 0, 0);
+    bottom: 0;
+    line-height: 1.5;
+    font-size: 17px;
+}
+.article h5 {
+    font-size: 20px;
+    margin: 2.5px;
+}
+
+
+.footer {
+    text-align: center;
+    margin-top: 140px;
+    width: 100%;
+    padding-top: 3%;
+    background: #333 ;
+    color: whitesmoke;
+    display: flex;
+    line-height: 40px;
+}
+.column1 {
+    width: 30%;
+    margin-left: 10%;   
+}
+.column2 {
+    width: 30%;
+}    
+.column2 a {
+    color: whitesmoke;
+    font-size: 15px;
+}
+.column3 {
+    width: 30%;
+    margin-left: 3%;
+}
+
+@media screen and (max-width:768px) {
+    .nav {
+        height: auto;
+    }
+    nav ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+    nav ul li ul {
+        position: static;
+        background-color: transparent;
+        padding: 0;
+    }
+    nav ul li:hover > ul {
+        display: none;
+    }
+    .section-1 {
+        margin-top: 65%;
+    }
+    .card {
+        width: 100%;
+    }
+    .card-1,
+    .card-2 {
+        margin: 15px 0;
+    }
+    .card-2 {
+       margin-top: 60%;
+    }
+}

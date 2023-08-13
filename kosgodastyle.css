@@ -1,0 +1,263 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: montserrat;
+
+}
+nav{
+    background: #323233;
+    height: 100px;
+    width: 100%;
+}
+logo{
+    line-height: 80px;
+    padding: 40px;
+
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 10px;
+}
+nav ul li a{
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    text-transform: uppercase;
+}
+a:hover {
+    background-color: rgba(8, 241, 241, 0.467);
+    transition: 0.3s ease-in-out ;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+nav ul li ul {
+    position: absolute;
+    display: none;
+    background-color: rgb(0, 0, 0);
+    padding: 0%;
+    z-index: 999;
+}
+nav ul li:hover > ul {
+    display: block;                           
+}
+nav ul li ul li {
+    line-height: 2;
+    width: 150px;
+    padding: 6px;
+    display: block;
+    text-align: center;
+}
+
+
+.bgimg {
+    text-align: center;
+    position: relative;
+    opacity: 89%;
+}
+.bgimg h1 {
+    top: 20%;
+    left: 10%;
+    color: white;
+    position: absolute;
+    font-size: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.para-title {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0px;
+}
+.title-line {
+    flex-direction: row;
+    height: 5px;
+    background-color: darkslategrey;
+    margin: 10px 20px;
+}
+p {
+    margin: 30px 90px;
+}
+
+
+.container {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 50px 30px 50px 20px;
+    background: rgba(19, 99, 68, 0.914);
+    border-radius: 24px;
+    margin: 0 80px;
+}
+.card img {
+    object-fit: cover;
+    margin-left: 70px;
+    border-radius: 15px;
+    box-shadow: 0 60px 40px rgb(184, 183, 183);
+}
+.card img:hover {
+    transition: 0.3s ease-in-out;
+    transform: translateY(-4%);
+}
+.intro {
+    margin: 20px 8px 5px 8px;
+    color: white;
+}
+
+
+.gallery {
+    margin-top: 50px;
+    display: flex;
+    max-width: 1500px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.gallery img {
+    border-radius: 50%;
+}
+.gallery img:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+
+.map {
+    white-space: nowrap;
+    text-align: center;
+    width: 325px; 
+    padding: 6px 0;
+    margin-left: 40%;
+    margin-top: 10%;
+}
+.map iframe {
+    width:325px; 
+    height: 280px; 
+    border: 0;
+}
+
+
+.footer {
+    text-align: center;
+    margin-top: 140px;
+    width: 100%;
+    padding-top: 3%;
+    background: #333 ;
+    color: whitesmoke;
+    display: flex;
+    line-height: 40px;
+}
+.column1 {
+    width: 30%;
+    margin-left: 10%;   
+}
+.column2 {
+    width: 30%;
+}    
+.column2 a {
+    color: whitesmoke;
+    font-size: 15px;
+}
+.column3 {
+    width: 30%;
+    margin-left: 5%;
+}
+
+
+@media only screen and (max-width:768px){
+    body{
+        background-color: rgb(137, 184, 201)
+    }
+}        
+
+@media (max-width:768px) {
+    .nav ul li {
+        display: block;
+        line-height: 60px;
+        margin: 5px;
+    }
+    nav ul lu ul {
+        position: static;
+        display: none;
+        color: black;
+        padding: 0%;
+        z-index: 999;
+    }
+    .nav ul li ul li {
+        line-height: 2;
+        width: 100%;
+        padding: 6px;
+        display: block;
+        text-align: center;
+    }
+    .bgimg img {
+        height: auto;
+        width: 100%;
+    }
+    .bgimg h1 {
+        margin-top: 20%;
+        font-size: 60px;
+    }
+    .para-title {
+        margin: 20px 0px ;
+    }
+    p {
+        margin: 20px;
+    }
+    .container{
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+    }
+    .card {
+        max-width: 100%;
+        margin-bottom: 20px;
+        padding: 30px 20px;
+    }
+    .card img {
+        margin-left: 0;
+    }
+    .gallery {
+        margin-top: 30px;
+    }
+    .gallery img {
+        width: 100%;
+        height: auto;
+    } 
+    .map {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+    .map iframe {
+        width: 100%;
+        height: 200px;
+    }
+    .footer {
+        flex-wrap: wrap;
+        padding: 20px 10px;
+        margin-top: 50px;
+    }
+    .column1,
+    .column2,
+    .column3 {
+        width: 100%;
+    }
+}

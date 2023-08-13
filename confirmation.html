@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="confirmationstyle.css"> 
+        <title>Confirmation Page</title>
+    </head>
+    <body>
+            <nav>
+                <label class="logo">
+                    <img src="Images/logo-new.png" width="100" height="100" alt="logo">
+                </label>
+
+                <h2>Tickets</h2>
+
+                <ul>
+                    <li> <a href="index.html">Home page</a></li>
+                    <li><a href="tickets.html">Tickets Page</a></li>
+                    <li><a href="details.html">Details Page</a></li>
+                    <li><a href="payments.html">Payments Page</a></li>
+                </ul>    
+            </nav>
+
+            <!--main content of the page starts here-->
+            <div class="heading">
+                <h4>Confirmation </h4>
+            </div><br><br>
+
+
+        <!--confirmation message-->
+        <p class="confirmation-message">
+            Thank you for your order. 
+            Your order has been confirmed with us. 
+            You can show this confirmation at the entrance. 
+            Following is the summary of your order.</p>
+
+
+        <!--details table from details pg-->
+        <table id="detailsTable" >  
+            <tbody>
+            <tr>
+                <td>Full Name</td>
+                <td id="outputFullName"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td id="outputGender"></td>
+            </tr>
+            <tr>
+                <td>Mobile Number </td>
+                <td id="outputMobileNumber"></td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td id="outputEmail"></td>
+          </tr>
+            
+          </tbody>
+        </table>
+
+        
+        <!--tickets table from tickets page-->
+        <table id="ticketTable">  
+            <tr>
+                <td>Date</td>
+                <td id="tableinputdate"></td>
+            </tr>
+            <tr>
+                <td>Time</td>
+                <td id="tableinputtime"></td>
+            </tr>
+            <tr>
+                <td>Duration</td>
+                <td id="tableinputduration"></td>
+            </tr>
+            <tr>
+                <th>Tickets</th>
+                <th>Charges</th>
+            </tr>
+            <tr id="rowlocaladult">
+                <td id="localadulttable"> Sl adult</td>
+                <td id="localadulttableprice"></td>
+            </tr>
+            <tr id="rowlocalchild">
+                <td id="localchildtable"> Sl child</td>
+                <td id="localchildtableprice"></td>
+            </tr>
+            <tr id="rowforiegnadult">
+                <td id="foriegnadulttable"> foreigner adult</td>
+                <td id="foriegnadulttableprice"></td>
+            </tr>
+            <tr id="rowforiegnchild">
+                <td id="foriegnchildtable"> foreigner child</td>
+                <td id="foriegnchildtableprice"></td>
+            </tr>
+            <tr id="rowinfant">
+                <td id="infanttable"> infant</td>
+                <td id="infanttableprice"></td>
+            </tr>
+            <tr>
+                <th>Total Payable </th>
+                <th id="totalPayableprice"> $0</th>
+            </tr>
+        </table>
+
+
+
+        <!--Footer-->
+        <div class="footer">
+            <div class="column1">
+                <h3>ABOUT</h3>
+                <p><a href="index.html">Home | </a>
+                    <a href="turtlecat.html">Turtle Categories | </a>
+                    <a href="threats.html">Threats | </a>
+                    <a href="hikkaduwa.html">Hikkaduwa Hatchery | </a>
+                    <a href="bentota.html">Bentota Hatchery | </a>
+                    <a href="kosgoda.html">Kosgoda Hatchery | </a>
+                    <a href="donate.html">Donate and Purchase </a></p>
+            </div>  
+            
+            <div class="column2">
+                <h3>CONTACT US</h3>
+                <p>077 8523697 <br> 011 9517532 </p>
+                <p>turtlehaven@gmail.com</p>
+                <p>No:258,<br>
+                    Galle ROad,
+                    Colombo,
+                    Sri Lanka</p>
+            </div>
+    
+        </div>
+    
+    
+        <script src="confirmationjs.js"></script>
+    </body>
+    </html>

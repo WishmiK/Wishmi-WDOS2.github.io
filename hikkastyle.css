@@ -1,0 +1,245 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: montserrat;
+    background-color: rgba(255, 157, 0, 0.693);
+}
+nav{
+    background: #323233;
+    height: 100px;
+    width: 100%;
+}
+logo{
+    line-height: 80px;
+    padding: 40px;
+
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 10px;
+}
+nav ul li a{
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    text-transform: uppercase;
+}
+a:hover {
+    background-color: rgba(8, 241, 241, 0.467);
+    transition: 0.3s ease-in-out ;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+nav ul li ul {
+    position: absolute;
+    display: none;
+    background-color: rgb(0, 0, 0);
+    padding: 0%;
+    z-index: 999;
+}
+nav ul li:hover > ul {
+    display: block;                           
+}
+nav ul li ul li {
+    line-height: 2;
+    width: 150px;
+    padding: 6px;
+    display: block;
+    text-align: center;
+}
+
+.bgimg {
+    text-align: center;
+    position: relative;
+    opacity: 89%;
+}
+.bgimg h1 {
+    top: 20%;
+    left: 6%;
+    color: rgb(23, 18, 18);
+    position: absolute;
+    font-size: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+ 
+
+.grid {
+    display: grid;
+    width: 80%;
+    grid-gap: 6rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 20rem) );
+    align-items: start;
+    margin: 2% 10%;
+}
+.grid-item {
+    background-color: sandybrown;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.grid-item:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem brown;
+}
+.card-img {
+    display: block;
+    width: 100%;
+    height: 20rem;
+    object-fit: fill;
+}
+.card-content {
+    padding: 3rem;
+}
+.card-header {
+    font-size: 0;
+    font-weight: 500;
+    color: yellowgreen;
+    margin-bottom: 1.5rem;
+}
+.card-text {
+    font-size: 1rem;
+    letter-spacing: 0;
+    line-height: 1;
+    color: rgb(45, 0, 0);
+    margin-bottom: 1.8rem;
+}
+
+
+.all-container {
+    display: flex;
+}
+.container1 {
+    margin: 5% 10%;
+    background-color: rgba(255, 157, 0, 0.055);
+    width: 500px;
+    height: 400px;
+    padding: 3.5rem 3.5rem;
+    box-shadow: 5px 10px rgba(234, 39, 4, 0.495);
+    border-radius: 30%;
+}
+.c-text {
+    padding: 20px 60px;
+    font-size: 17px;
+}
+.container2 {
+    margin: 8% 10%;  
+    font-size: 17px;
+    background-color:rgba(255, 157, 0, 0.063);
+    width: 500px;
+    height: 300px;
+    padding: 3.5rem 3.5rem;
+    box-shadow: 5px 10px rgba(147, 47, 29, 0.655);
+    border-radius: 30%;
+}
+
+/*button for tickets page */
+.btn {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(246, 246, 246);
+    width: 160px;
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+}
+
+
+.map {
+    white-space: nowrap;
+    text-align: center;
+    width: 325px; 
+    padding: 6px 0;
+    margin-left: 25%;
+}
+.map iframe {
+    width:325px; 
+    height: 280px; 
+    border: 0;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 140px;
+    width: 100%;
+    padding-top: 3%;
+    background: #333 ;
+    color: whitesmoke;
+    display: flex;
+    line-height: 40px;
+}
+.column1 {
+    width: 30%;
+    margin-left: 10%;   
+}
+.column2 {
+    width: 30%;
+}    
+.column2 a {
+    color: whitesmoke;
+    font-size: 15px;
+}
+.column3 {
+    width: 30%;
+    margin-left: 5%;
+}
+
+
+@media (max-width:768px) {
+    .nav ul li {
+        display: block;
+        line-height: 40px;
+        margin: 5px;
+    }
+    .bgimg img {
+        height: auto;
+        width: 100%;
+    }
+    .bgimg h1 {
+        margin-top: 11.5%;
+        font-size: 60px;
+    }
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)) ;
+        margin: 2% 5%;
+    }
+    .all-container {
+        flex-direction: column;
+    }
+    .container1,
+    .container2 {
+        width: 100%;
+        height: auto;
+        margin: 5% 0;
+        padding: 2rem;
+    }
+    .map {
+        width: 100%;
+        margin-left: 0;
+    }
+    .map iframe{
+        width: 100%;
+        height: 280px;
+    }
+    .footer {
+        flex-direction: column;
+        margin-top: 60px;
+    }
+    .column1,
+    .column2,
+    .column3 {
+        width: 100%;
+        margin: 2% 0;
+    }
+}

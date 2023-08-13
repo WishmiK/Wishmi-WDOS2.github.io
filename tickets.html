@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="ticketstyle.css"> 
+        <title>Tickets Page</title>
+    </head>
+    <body>
+            <nav>
+                <label class="logo">
+                    <img src="Images/logo-new.png" width="100" height="100" alt="logo">
+                </label>
+
+                <h2>Buy Tickets</h2>
+
+                <ul>
+                    <li> <a href="index.html">Home page</a></li>
+                </ul>    
+            </nav>
+
+    <!--main content of the page starts here-->
+
+        <!-- Peak Hours Table -->
+<table class="peak-hours-table">
+    <tr>
+        <th>Peak hours</th>
+    </tr>
+    <tr>
+        <td>10:00 am - 1:00 pm</td> 
+    </tr>
+    <tr>
+        <td>3:00 pm - 6:00pm</td>
+    </tr>
+</table>
+<br><br><br>
+
+<table class="normal-hours-table">
+  <tr>
+      <th>Normal hours</th>
+  </tr>
+  <tr>
+      <td>07:00 am - 10:00 pm</td> 
+  </tr>
+  <tr>
+      <td>1:00 pm - 3:00pm</td>
+  </tr>
+</table>
+<br><br><br>
+
+<table class="category-table">
+    <tr>
+        <th>Category</th>
+        <th>Price - per normal hour</th>
+        <th>Price - per peak hour</th>
+    </tr>
+    <tr>
+        <td>Local Adult</td>
+        <td>4 USD</td>
+        <td>6 USD</td>
+    </tr>
+    <tr>
+        <td>Local Child</td>
+        <td>2 USD</td>
+        <td>3 USD</td>
+    </tr>
+    <tr>
+        <td>Foreigner Adult</td>
+        <td>10 USD</td>
+        <td>13 USD</td>
+    </tr>
+    <tr>
+        <td>Foreigner Child</td>
+        <td>5 USD</td>
+        <td>8 USD</td>  
+    </tr>
+    <tr>
+        <td>Infant</td>
+        <td>Free</td>
+        <td>Free</td>
+    </tr>
+</table><br><br><br>
+
+
+<div class="formcontainer">
+    <form onsubmit="calculateTotalAmount()"  method="get" id="ticketsForm">
+        
+        <fieldset>
+            <div class="form-control">
+                <label for="dateInput">When are you coming?</label>
+                <input type="date" id="dateInput" name="dateInput" required>
+            </div>
+
+            <div class="ticket-category">
+                <label for="localAdult">Local Adult:</label>
+                <button type="button" class="decrement"  onclick="decrement('localAdult')">-</button>
+                <input type="text" id="localAdult" name="localAdult" value="0"  readonly>
+                <button type="button" class="increment"  onclick="increment('localAdult')">+</button>
+            </div>
+
+            <div class="ticket-category">
+                <label for="localChild">Local Child:</label>
+                <button type="button" class="decrement"  onclick="decrement('localChild')">-</button>
+                <input type="text" id="localChild" name="localChild" value="0"  readonly>
+                <button type="button" class="increment"  onclick="increment('localChild')">+</button>
+            </div>
+
+            <div class="ticket-category">
+                <label for="foreignerAdult">Foreigner Adult:</label>
+                <button type="button" class="decrement"  onclick="decrement('foreignerAdult')">-</button>
+                <input type="text" id="foreignerAdult" name="foreignerAdult" value="0"  readonly> <!--read only prevents user from modifying the input field values-->
+                <button type="button" class="increment"  onclick="increment('foreignerAdult')">+</button>
+            </div>
+
+            <div class="ticket-category">
+                <label for="foreignerChild">Foreigner Child:</label>
+                <button type="button" class="decrement"  onclick="decrement('foreignerChild')">-</button>
+                <input type="text" id="foreignerChild" name="foreignerChild" value="0"  readonly>
+                <button type="button" class="increment"  onclick="increment('foreignerChild')">+</button>
+            </div>
+
+            <div class="ticket-category">
+                <label for="infant">Infant:</label>
+                <button type="button" class="decrement"  onclick="decrement('infant')">-</button>
+                <input type="text" id="infant" name="infant" value="0"  readonly>
+                <button type="button" class="increment"  onclick="increment('infant')">+</button>
+            </div>  
+
+             <div class="form-control">
+                    <label for="duration">Duration:</label>
+                    <select id="duration" name="duration" multiple onchange="calculateTotalAmount()">
+                        <option value="" selected disabled>Select a time slot</option>
+                        <option value="07:00 to 08:00">07:00 AM to 08:00 AM</option>
+                        <option value="08:00 to 09:00">08:00 AM to 09:00 AM</option>
+                        <option value="09:00 to 10:00">09:00 AM to 10:00 AM</option>
+                        <option value="10:00 to 11:00">10:00 AM to 11:00 AM</option>
+                        <option value="11:00 to 12:00">11:00 AM to 12:00 PM</option>
+                        <option value="12:00 to 13:00">12:00 PM to 01:00 PM</option>
+                        <option value="13:00 to 14:00">01:00 PM to 02:00 PM</option>
+                        <option value="14:00 to 15:00">02:00 PM to 03:00 PM</option>
+                        <option value="15:00 to 16:00">03:00 PM to 04:00 PM</option>
+                        <option value="16:00 to 17:00">04:00 PM to 05:00 PM</option>
+                        <option value="17:00 to 18:00">05:00 PM  to 06:00 PM</option>
+                    </select>
+                    
+        </div>
+        <br><br> <br><br>
+
+ 
+        <a href="details.html" id="purchase-link" >    
+            <button type="button" value="submit" id="purchasebtn">Continue with purchase</button>
+        </a> 
+
+        <p>total amount payable: <span id="totalAmount">0</span></p>
+        <p>Duration:<span id="totalHours"></span></p>
+        <p>Selected time slot: <span id="selectedTimeSlots"></span></p>
+
+    </fieldset>
+    </form>
+    
+</div>  <br><br> <br><br>
+
+<!--summary table-->
+
+<table id="ticketTable" >  
+    <tr>
+        <td>Date</td>
+        <td id="tableinputdate"></td>
+    </tr>
+    <tr>
+        <td>Time</td>
+        <td id="tableinputtime"></td>
+    </tr>
+    <tr>
+        <td>Duration</td>
+        <td id="tableinputduration"></td>
+    </tr>
+    <tr>
+        <th>Tickets</th>
+        <th>Charges</th>
+    </tr>
+    <tr id="rowlocaladult">
+        <td id="localadulttable"> Sl adult</td>
+        <td id="localadulttableprice"></td>
+    </tr>
+    <tr id="rowlocalchild">
+        <td id="localchildtable"> Sl child</td>
+        <td id="localchildtableprice"></td>
+    </tr>
+    <tr id="rowforiegnadult">
+        <td id="foriegnadulttable"> foreigner adult</td>
+        <td id="foriegnadulttableprice"></td>
+    </tr>
+    <tr id="rowforiegnchild">
+        <td id="foriegnchildtable"> foreigner child</td>
+        <td id="foriegnchildtableprice"></td>
+    </tr>
+    <tr id="rowinfant">
+        <td id="infanttable"> infant</td>
+        <td id="infanttableprice"></td>
+    </tr>
+    <tr>
+        <th>Total Payable </th>
+        <th id="totalPayableprice"> $0</th>
+    </tr>
+</table>
+
+<br><br><br><br>
+
+ <!--Footer-->
+ <div class="footer">
+  <div class="column1">
+      <h3>ABOUT</h3>
+      <p><a href="index.html">Home | </a>
+          <a href="turtlecat.html">Turtle Categories | </a>
+          <a href="threats.html">Threats | </a>
+          <a href="hikkaduwa.html">Hikkaduwa Hatchery | </a>
+          <a href="bentota.html">Bentota Hatchery | </a>
+          <a href="kosgoda.html">Kosgoda Hatchery | </a>
+          <a href="donate.html">Donate and Purchase </a></p>
+  </div>  
+  
+  <div class="column2">
+      <h3>CONTACT US</h3>
+      <p>077 8523697 <br> 011 9517532 </p>
+      <p>turtlehaven@gmail.com</p>
+      <p>No:258,<br>
+          Galle ROad,
+          Colombo,
+          Sri Lanka</p>
+  </div>
+
+</div>
+
+
+
+
+<br><br><br>
+        <script src="ticketsjs.js"> </script>
+    </body>
+</html>

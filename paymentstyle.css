@@ -1,0 +1,308 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    outline: none; 
+    border: none;
+    text-decoration: none;
+    
+}
+body {
+    font-family: montserrat;
+}
+
+/* nav bar */
+
+nav {
+    background-color: #000000;
+    height: 170px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+.logo{
+    line-height: 80px;
+    padding: 40px;
+}
+h2 {
+    color: white;
+    font-size: 55px;
+    line-height: 60px;
+    padding: 0 100px;
+    font-weight: bold;
+    margin-top: -5%;
+    margin-left: 35%;
+
+}
+nav ul {
+    float: left;
+    margin-left: 10%;
+    margin-top: -2%;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    list-style-type: none;
+}
+nav ul li a {
+    color: rgb(255, 255, 255);
+    padding: 7px 13px;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+a.active, a:hover {
+    background: rgb(21, 168, 187);
+    transition: .5s;
+}
+
+  /*css for the content starts here*/
+  h4 {             /*heading*/
+    color: rgb(39, 22, 0);
+    font-weight: bold;
+    margin-top: 1%;
+    margin-left: 30%;
+    font-size: 28px;
+    padding: 0 100px;
+}
+
+
+.container{
+    min-height: 100vh;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 60px;
+}
+
+.container form{
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    padding: 20px;
+    width: 600px;
+    padding-top: 160px;
+}
+
+.container form .inputBox{
+    margin-top: 20px;
+}
+
+.container form .inputBox span{
+    display: block;
+    color:#999;
+    padding-bottom: 5px;
+}
+
+.container form .inputBox input,
+.container form .inputBox select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border:1px solid rgba(0,0,0,.3);
+    color:#444;
+}
+
+.container form .flexbox{
+    display: flex;
+    gap:15px;
+}
+
+.container form .flexbox .inputBox{
+    flex:1 1 150px;
+}
+
+.container form .submit-btn{
+    width: 100%;
+    background:linear-gradient(45deg, rgb(68, 68, 68), rgb(160, 160, 160));
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    color:#fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.container form .submit-btn:hover{
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+.container .card-container{
+    margin-bottom: -150px;
+    position: relative;
+    height: 250px;
+    width: 400px;
+}
+
+.container .card-container .front{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0; left: 0;
+    background:linear-gradient(45deg, rgb(98, 98, 99), rgb(197, 196, 197));
+    border-radius: 5px;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    padding:20px;
+    transform:perspective(1000px) rotateY(0deg);
+    transition:transform .4s ease-out;
+}
+
+.container .card-container .front .image{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.container .card-container .front .image img{
+    height: 50px;
+}
+
+.container .card-container .front .card-number-box{
+    padding:30px 0;
+    font-size: 22px;
+    color:#fff;
+}
+
+.container .card-container .front .flexbox{
+    display: flex;
+}
+
+.container .card-container .front .flexbox .box:nth-child(1){
+    margin-right: auto;
+}
+
+.container .card-container .front .flexbox .box{
+    font-size: 15px;
+    color:#fff;
+}
+
+.container .card-container .back{
+    position: absolute;
+    top:0; left: 0;
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(45deg, rgb(123, 123, 123), rgb(196, 196, 196));
+    border-radius: 5px;
+    padding: 20px 0;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    transform:perspective(1000px) rotateY(180deg);
+    transition:transform .4s ease-out;
+}
+
+.container .card-container .back .stripe{
+    background: #000;
+    width: 100%;
+    margin: 10px 0;
+    height: 50px;
+}
+
+.container .card-container .back .box{
+    padding: 0 20px;
+}
+
+.container .card-container .back .box span{
+    color:#fff;
+    font-size: 15px;
+}
+
+.container .card-container .back .box .cvv-box{
+    height: 50px;
+    padding: 10px;
+    margin-top: 5px;
+    color:#333;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.container .card-container .back .box img{
+    margin-top: 30px;
+    height: 30px;
+}
+
+.error-message {
+    color: red;
+}
+
+
+/*  styles for the ticket table */
+#ticketTable {
+    border-collapse: collapse;
+    border-radius: 10px;
+    border: 2px solid #333; /* Darker border for a modern look */
+    margin-left: 740px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    overflow: hidden; /* To ensure border radius affects inner elements */
+    width: 600px; /* Set a fixed width for consistency */
+    background-color: #f9f9f9; /* A light background to contrast with the content */
+}
+
+#ticketTable th, #ticketTable td {
+    padding: 10px 20px; /* More padding for better spacing */
+    border: 1px solid #ddd; /* Lighter border for a modern look */
+    text-align: center;
+}
+
+#ticketTable th {
+    background-color: #333; /* Darker header background for contrast */
+    color: #fff; /* White text for headers */
+    font-weight: 600; /* Slightly bolder text for headers */
+    text-transform: uppercase; /* Uppercase letters for headers */
+}
+
+/* CSS to hide rows without gaps */
+.hidden-row {
+    display: none;
+}
+
+
+/*  Footer Styles */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #333;
+    color: #f9f9f9;
+    font-size: 1em;
+}
+
+/* Column-specific Styles */
+.column1, .column2 {
+    flex: 1; 
+    padding: 20px;
+}
+
+.footer h3 {
+    border-bottom: 1px solid #f9f9f9;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: #f9f9f9;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ddd;
+}
+
+/* Contact Details */
+.column2 p {
+    line-height: 1.5em;
+}

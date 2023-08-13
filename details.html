@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Details </title>
+        <meta name="viewport"  content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="detailstyle.css">
+        <link rel="stylesheet" href="international-telephone-input.css">
+        <script src="international-telephone-input.js"></script>
+    </head>
+
+    <body>    <!--nav bar-->
+        <nav>
+            <label class="logo">
+                <img src="Images/logo-new.png" width="100" height="100" alt="logo">
+            </label>
+
+            <h2>Tickets</h2>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tickets.html">Tickets Page</a></li>
+            </ul>
+        </nav> 
+        
+
+<!--page content starts here-->
+            <div class="heading">
+                <h4>Enter your details </h4>
+            </div><br><br>
+
+            <!--the form starts here-->
+            <div class="container">
+              <form id="detailsForm">
+                <div class="form">
+                        <div class="set1">
+                            <label for="fullName">Full Name:</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                            <div class="error-message" id="fullNameError"></div>
+                        </div>
+
+                        <div class="set1">
+                            <label for="gender">Gender:</label>
+                            <select id="gender" name="gender" required>
+                                <option value="" disabled selected>Select Gender</option>
+                                <option value="female">Female</option>
+                                <option value="male">Male</option>
+                            </select>
+                        </div>
+
+                            <div class="iti">
+                                <label for="mobileNumber">Phone Number:</label>
+                                <input type="tel" id="mobileNumber" name="mobileNumber" required>
+                                <div class="error-message" id="phoneNumberError"></div>
+                            </div>
+                
+                            <div class="set1">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                                <div class="error-message" id="emailError"></div>
+                            </div>
+                
+                            <div class="set1">
+                                <label for="confirmEmail">Confirm Email:</label>
+                                <input type="email" id="confirmEmail" name="confirmEmail" required>
+                                <div class="error-message" id="confirmEmailError"></div>
+                            </div>
+
+                            <a href="payments.html" id="purchase-link" class="button-link">Submit</a>
+
+                            
+                        </div>
+                  </form>         
+                </div>
+               
+
+
+            <table id="detailsTable" >  
+              <tbody>
+              <tr>
+                  <td>Full Name</td>
+                  <td id="outputFullName"></td>
+              </tr>
+              <tr>
+                  <td>Gender</td>
+                  <td id="outputGender"></td>
+              </tr>
+              <tr>
+                  <td>Mobile Number </td>
+                  <td id="outputMobileNumber"></td>
+              </tr>
+              <tr>
+                <td>Email</td>
+                <td id="outputEmail"></td>
+            </tr>
+              
+            </tbody>
+          </table>
+
+            
+<!--Footer-->
+        <div class="footer">
+            <div class="column1">
+                <h3>ABOUT</h3>
+                <p><a href="index.html">Home | </a>
+                    <a href="turtlecat.html">Turtle Categories | </a>
+                    <a href="threats.html">Threats | </a>
+                    <a href="hikkaduwa.html">Hikkaduwa Hatchery | </a>
+                    <a href="bentota.html">Bentota Hatchery | </a>
+                    <a href="kosgoda.html">Kosgoda Hatchery | </a>
+                    <a href="donate.html">Donate and Purchase </a></p>
+            </div>  
+            
+            <div class="column2">
+                <h3>CONTACT US</h3>
+                <p>077 8523697 <br> 011 9517532 </p>
+                <p>turtlehaven@gmail.com</p>
+                <p>No:258,<br>
+                    Galle Road,
+                    Colombo,
+                    Sri Lanka</p>
+            </div>
+        </div>
+
+            <script src="detailsjs.js"></script>
+    </body>
+</html>

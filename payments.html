@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="paymentstyle.css"> 
+        <title>Payment Page</title>
+    </head>
+    <body>
+            <nav>
+                <label class="logo">
+                    <img src="Images/logo-new.png" width="100" height="100" alt="logo">
+                </label>
+
+                <h2>Tickets</h2>
+
+                <ul>
+                    <li> <a href="index.html">Home page</a></li>
+                    <li><a href="tickets.html">Tickets Page</a></li>
+                    <li><a href="details.html">Details Page</a></li>
+                </ul>    
+            </nav>
+
+    <div class="heading">
+        <h4>Payment Details </h4>
+    </div><br><br>
+
+    
+    <div class="container">
+
+        <div class="card-container">
+
+            <div class="front">
+                <div class="image">
+                    <img src="Images/chip.png" alt="card img1">
+                    <img src="Images/visa.png" alt="card img2">
+                </div>
+                <div class="card-number-box">################</div>
+                <div class="flexbox">
+                    <div class="box">
+                        <span>card holder</span>
+                        <div class="card-holder-name">full name</div>
+                    </div>
+                    <div class="box">
+                        <span>expires</span>
+                        <div class="expiration">
+                            <span class="exp-month">mm</span>
+                            <span class="exp-year">yy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="back">
+                <div class="stripe"></div>
+                <div class="box">
+                    <span>cvv</span>
+                    <div class="cvv-box"></div>
+                    <img src="image/visa.png" alt="">
+                </div>
+            </div>
+
+        </div>
+
+        <form action="form">
+            <div class="inputBox">
+                <span>card number</span>
+                <input type="text" maxlength="16" class="card-number-input">
+                <div class="error-message"></div> <!-- error message -->
+            </div>
+            <div class="inputBox">
+                <span>card holder</span>
+                <input type="text" class="card-holder-input">
+                <div class="error-message"></div> <!-- error message -->
+            </div>
+            <div class="flexbox">
+                <div class="inputBox">
+                    <span>expiration mm</span>
+                    <select name="month" id="monthly" class="month-input">
+                        <option value="month" selected disabled>month</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <div class="inputBox">
+                    <span>expiration yy</span>
+                    <select name="year" id="yearly" class="year-input">
+                        <option value="year" selected disabled>year</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                    </select>
+                </div>
+                <div class="inputBox">
+                    <span>cvv</span>
+                    <input type="text" maxlength="4" class="cvv-input">
+                    <div class="error-message"></div> <!-- error message -->
+                </div>
+            </div>
+            <a href="confirmation.html" id="purchase-link" class="button-link">Submit</a>
+            
+        </form>
+
+
+        <table id="ticketTable" >  
+            <tr>
+                <td>Date</td>
+                <td id="tableinputdate"></td>
+            </tr>
+            <tr>
+                <td>Time</td>
+                <td id="tableinputtime"></td>
+            </tr>
+            <tr>
+                <td>Duration</td>
+                <td id="tableinputduration"></td>
+            </tr>
+            <tr>
+                <th>Tickets</th>
+                <th>Charges</th>
+            </tr>
+            <tr id="rowlocaladult">
+                <td id="localadulttable"> Sl adult</td>
+                <td id="localadulttableprice"></td>
+            </tr>
+            <tr id="rowlocalchild">
+                <td id="localchildtable"> Sl child</td>
+                <td id="localchildtableprice"></td>
+            </tr>
+            <tr id="rowforiegnadult">
+                <td id="foriegnadulttable"> foreigner adult</td>
+                <td id="foriegnadulttableprice"></td>
+            </tr>
+            <tr id="rowforiegnchild">
+                <td id="foriegnchildtable"> foreigner child</td>
+                <td id="foriegnchildtableprice"></td>
+            </tr>
+            <tr id="rowinfant">
+                <td id="infanttable"> infant</td>
+                <td id="infanttableprice"></td>
+            </tr>
+            <tr>
+                <th>Total Payable </th>
+                <th id="totalPayableprice"> $0</th>
+            </tr>
+        </table>
+
+    </div> 
+
+    <!--Footer-->
+    <div class="footer">
+        <div class="column1">
+            <h3>ABOUT</h3>
+            <p><a href="index.html">Home | </a>
+                <a href="turtlecat.html">Turtle Categories | </a>
+                <a href="threats.html">Threats | </a>
+                <a href="hikkaduwa.html">Hikkaduwa Hatchery | </a>
+                <a href="bentota.html">Bentota Hatchery | </a>
+                <a href="kosgoda.html">Kosgoda Hatchery | </a>
+                <a href="donate.html">Donate and Purchase </a></p>
+        </div>  
+        
+        <div class="column2">
+            <h3>CONTACT US</h3>
+            <p>077 8523697 <br> 011 9517532 </p>
+            <p>turtlehaven@gmail.com</p>
+            <p>No:258,<br>
+                Galle ROad,
+                Colombo,
+                Sri Lanka</p>
+        </div>
+
+    </div>
+
+
+    <script src="paymentsjs.js"></script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: montserrat;
+}
+
+/* nav bar */
+
+nav {
+    background-color: #000000;
+    height: 170px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+.logo{
+    line-height: 80px;
+    padding: 40px;
+}
+h2 {
+    color: white;
+    font-size: 55px;
+    line-height: 60px;
+    padding: 0 100px;
+    font-weight: bold;
+    margin-top: -5%;
+    margin-left: 35%;
+
+}
+nav ul {
+    float: left;
+    margin-left: 10%;
+    margin-top: -2%;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    list-style-type: none;
+}
+nav ul li a {
+    color: rgb(255, 255, 255);
+    padding: 7px 13px;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+a.active, a:hover {
+    transition: .5s;
+}
+
+/*  styles for the ticket table */
+#ticketTable {
+    border-collapse: collapse;
+    border-radius: 10px;
+    border: 2px solid #333; /* Darker border for a modern look */
+    margin-left: 740px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    overflow: hidden; /* To ensure border radius affects inner elements */
+    width: 600px; /* Set a fixed width for consistency */
+    background-color: #f9f9f9; /* A light background to contrast with the content */
+}
+
+#ticketTable th, #ticketTable td {
+    padding: 10px 20px; /* More padding for better spacing */
+    border: 1px solid #ddd; /* Lighter border for a modern look */
+    text-align: center;
+}
+
+#ticketTable th {
+    background-color: #333; /* Darker header background for contrast */
+    color: #fff; /* White text for headers */
+    font-weight: 600; /* Slightly bolder text for headers */
+    text-transform: uppercase; /* Uppercase letters for headers */
+}
+
+/* CSS to hide rows without gaps */
+.hidden-row {
+    display: none;
+}
+
+/* Base styles for the header */
+header {
+    background-color: #333; /* Dark gray background */
+    color: #ffffff; /* White text */
+    text-align: center; /* Center the text */
+    padding: 20px 0; /* Padding on top and bottom */
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2); /* A subtle shadow to give depth */
+    font-family: Arial, sans-serif; 
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensures the header stays on top of other content */
+}
+
+.logo {
+    font-size: 24px; /* Larger font size */
+    font-weight: bold; /* Bold font weight */
+    letter-spacing: 2px; /* Spacing between letters */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    display: inline-block; /* To allow for more styling flexibility */
+    
+}
+
+
+/*  styles for the peak hour table */
+.peak-hours-table {
+    width: 50%; 
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.peak-hours-table th, 
+.peak-hours-table td {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.peak-hours-table th {
+    background-color: #333;
+    color: #fff;
+    font-weight: 600;
+}
+
+.peak-hours-table tbody tr:nth-child(odd) {
+    background-color: #f4f4f4;
+}
+
+.peak-hours-table tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+
+/*  styles for the normal hour table */
+.normal-hours-table {
+    width: 50%; 
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.normal-hours-table th, 
+.normal-hours-table td {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.normal-hours-table th {
+    background-color: #333;
+    color: #fff;
+    font-weight: 600;
+}
+
+.normal-hours-table tbody tr:nth-child(odd) {
+    background-color: #f4f4f4;
+}
+
+.normal-hours-table tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+
+
+/* Base styles for the category table */
+.category-table {
+    width: 70%; 
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+  
+}
+
+.category-table th, 
+.category-table td {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.category-table th {
+    background-color: #333;
+    color: #fff;
+    font-weight: 600;
+}
+
+.category-table tbody tr:nth-child(odd) {
+    background-color: #f4f4f4;
+}
+
+.category-table tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+.category-table tbody td {
+    font-weight: 300;
+}
+
+
+/* Styling for the main container */
+.formcontainer {
+    width: 70%; 
+    margin: 0 auto; /* Center the form on the page */
+    padding: 20px;
+    background-color: #f9f9f9; 
+    border: 1px solid #e0e0e0;
+    border-radius: 10px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Styling for form controls */
+.form-control, .ticket-category {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    margin-bottom: 20px; 
+}
+
+label {
+    flex: 1; 
+}
+
+input[type="text"], select {
+    flex: 2; 
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Styling for the buttons */
+button {
+    padding: 10px 15px; 
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Styling for the increment and decrement buttons */
+.increment, .decrement {
+    margin: 0 10px; 
+}
+
+#purchasebtn {
+    width: 100%; 
+}
+
+p {
+    font-size: 1.1em; 
+}
+
+/* Styling for the fieldset */
+fieldset {
+    border: none; 
+    padding: 0;
+}
+
+/*  Footer Styles */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #333;
+    color: #f9f9f9;
+    font-size: 1em;
+}
+
+/* Column-specific Styles */
+.column1, .column2 {
+    flex: 1; 
+    padding: 20px;
+}
+
+.footer h3 {
+    border-bottom: 1px solid #f9f9f9;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: #f9f9f9;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ddd;
+}
+
+/* Contact Details */
+.column2 p {
+    line-height: 1.5em;
+}
